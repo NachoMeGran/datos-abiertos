@@ -1,0 +1,213 @@
+{
+  "profile": "data-package",
+  "name": "iconos-diseno-industrial-espanol",
+  "title": "Iconos del diseño industrial español del siglo XX",
+  "description": "Doce objetos de diseño industrial español del siglo XX verificados en las fichas del Museu del Disseny de Barcelona y otros museos: año, autoría, fabricantes, premios y qué parte es española.",
+  "version": "1.0.0",
+  "created": "2026-11-20T00:00:00Z",
+  "homepage": "https://github.com/NachoMeGran/datos-abiertos/tree/main/iconos-diseno-industrial-espanol",
+  "keywords": [
+    "diseño industrial",
+    "diseño español",
+    "Museu del Disseny",
+    "Premios Delta",
+    "ADI-FAD",
+    "Minipimer",
+    "Citromatic"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Nacho Menéndez Granda",
+      "path": "https://nachomg.com/nacho-menendez/",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Museu del Disseny de Barcelona, catálogo en línea de la colección",
+      "path": "https://cataleg.museudeldisseny.cat/"
+    },
+    {
+      "title": "Victoria and Albert Museum, MPZ 2 juicer (CIRC.344 to D-1974)",
+      "path": "https://collections.vam.ac.uk/item/O1227044/"
+    },
+    {
+      "title": "mNACTEC en Google Arts & Culture, motocicleta Montesa Impala 175",
+      "path": "https://artsandculture.google.com/asset/motorcycle-montesa-impala-175/KAGjJr5LrnJ8Uw"
+    },
+    {
+      "title": "mNACTEC, exposición «Gabriel Lluelles, industrial designer»",
+      "path": "https://mnactec.cat/en/the-museum/press-detail/exhibition-gabriel-lluelles-industrial-designer"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "iconos-diseno-industrial-espanol",
+      "path": "iconos-diseno-industrial-espanol.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Identificador estable.",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "objeto",
+            "type": "string",
+            "description": "Tipo de objeto.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "modelo",
+            "type": "string",
+            "description": "Nombre del modelo.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "anio",
+            "type": "integer",
+            "description": "Año de diseño o datación según la fuente principal.",
+            "constraints": {
+              "required": true,
+              "minimum": 1900,
+              "maximum": 2000
+            }
+          },
+          {
+            "name": "disenador",
+            "type": "string",
+            "description": "Autoría del diseño según la fuente principal (varias personas separadas por punto y coma).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "fabricante_original",
+            "type": "string",
+            "description": "Primer productor documentado. Vacío si la fuente no lo identifica."
+          },
+          {
+            "name": "produccion_original",
+            "type": "string",
+            "description": "Lugar y periodo de la primera producción, o contexto del diseño.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "otros_fabricantes",
+            "type": "string",
+            "description": "Productores y reediciones posteriores documentados."
+          },
+          {
+            "name": "categoria",
+            "type": "string",
+            "description": "Categoría (lista cerrada).",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "mobiliario",
+                "mobiliario urbano",
+                "iluminación",
+                "menaje",
+                "pequeño electrodoméstico",
+                "vehículo"
+              ]
+            }
+          },
+          {
+            "name": "premios",
+            "type": "string",
+            "description": "Premios o selecciones citados en la ficha de la fuente."
+          },
+          {
+            "name": "que_es_espanol",
+            "type": "string",
+            "description": "Qué parte del objeto es española (diseño, desarrollo, fabricación).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "coleccion",
+            "type": "string",
+            "description": "Museo que conserva y documenta el objeto.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "numero_registro",
+            "type": "string",
+            "description": "Número de registro en la colección, si se publica."
+          },
+          {
+            "name": "url_fuente",
+            "type": "string",
+            "format": "uri",
+            "description": "Ficha del museo usada como fuente principal.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "url_fuente_2",
+            "type": "string",
+            "format": "uri",
+            "description": "Fuente complementaria."
+          },
+          {
+            "name": "url_nachomg",
+            "type": "string",
+            "format": "uri",
+            "description": "Artículo relacionado en nachomg.com, si existe."
+          },
+          {
+            "name": "nota",
+            "type": "string",
+            "description": "Precisiones y discrepancias entre fuentes."
+          }
+        ],
+        "primaryKey": [
+          "id"
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "name": "iconos-diseno-industrial-espanol-json",
+      "path": "iconos-diseno-industrial-espanol.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "description": "Los mismos registros que el CSV, como lista de objetos JSON. Las columnas con 'separador' se publican como arrays y las vacías como null."
+    }
+  ]
+}

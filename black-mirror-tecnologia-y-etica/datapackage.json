@@ -1,0 +1,238 @@
+{
+  "profile": "data-package",
+  "name": "black-mirror-tecnologia-y-etica",
+  "title": "Black Mirror: tecnología y ética episodio a episodio",
+  "description": "Los 34 títulos de Black Mirror (33 episodios de las temporadas 1 a 7 y especiales, más la película interactiva Bandersnatch) con fecha de estreno, guion, dirección, título en España, tecnología central y temas éticos.",
+  "version": "1.0.0",
+  "created": "2026-11-20T00:00:00Z",
+  "homepage": "https://github.com/NachoMeGran/datos-abiertos/tree/main/black-mirror-tecnologia-y-etica",
+  "keywords": [
+    "Black Mirror",
+    "ética tecnológica",
+    "inteligencia artificial",
+    "privacidad",
+    "series",
+    "cultura pop"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Nacho Menéndez Granda",
+      "path": "https://nachomg.com/nacho-menendez/",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Wikipedia (en), List of Black Mirror episodes (consultada el 2026-11-20)",
+      "path": "https://en.wikipedia.org/wiki/List_of_Black_Mirror_episodes"
+    },
+    {
+      "title": "The Movie Database (TMDB), Black Mirror, ficha es-ES",
+      "path": "https://www.themoviedb.org/tv/42009-black-mirror"
+    },
+    {
+      "title": "The Movie Database (TMDB), Black Mirror: Bandersnatch",
+      "path": "https://www.themoviedb.org/movie/569547-black-mirror-bandersnatch"
+    },
+    {
+      "title": "Wikipedia (es), Anexo:Episodios de Black Mirror",
+      "path": "https://es.wikipedia.org/wiki/Anexo:Episodios_de_Black_Mirror"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "black-mirror",
+      "path": "black-mirror.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Identificador estable (s01e01..., white-christmas, bandersnatch).",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "tipo",
+            "type": "string",
+            "description": "episodio, especial o pelicula-interactiva.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "episodio",
+                "especial",
+                "pelicula-interactiva"
+              ]
+            }
+          },
+          {
+            "name": "temporada",
+            "type": "integer",
+            "description": "Temporada (series 1-7). Vacío en los especiales.",
+            "constraints": {
+              "minimum": 1,
+              "maximum": 7
+            }
+          },
+          {
+            "name": "numero",
+            "type": "integer",
+            "description": "Número de episodio dentro de la temporada. Vacío en los especiales.",
+            "constraints": {
+              "minimum": 1
+            }
+          },
+          {
+            "name": "numero_global",
+            "type": "integer",
+            "description": "Número de orden global según la lista de Wikipedia en inglés (White Christmas es el 7; Bandersnatch no lleva número).",
+            "constraints": {
+              "minimum": 1
+            }
+          },
+          {
+            "name": "titulo_original",
+            "type": "string",
+            "description": "Título original en inglés.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "titulo_es",
+            "type": "string",
+            "description": "Título en España según la ficha en español de España (es-ES) de TMDB; igual al original si no se traduce.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "nota_titulo_es",
+            "type": "string",
+            "description": "Discrepancias con Wikipedia en español u otras observaciones sobre el título."
+          },
+          {
+            "name": "fecha_estreno",
+            "type": "date",
+            "description": "Fecha de primera emisión o publicación (AAAA-MM-DD).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "plataforma_estreno",
+            "type": "string",
+            "description": "Cadena o plataforma del estreno.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "Channel 4",
+                "Netflix"
+              ]
+            }
+          },
+          {
+            "name": "guion",
+            "type": "string",
+            "description": "Créditos de guion tal como figuran en la fuente.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "direccion",
+            "type": "string",
+            "description": "Créditos de dirección.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "tecnologia_central",
+            "type": "string",
+            "description": "Descripción breve propia de la tecnología o el mecanismo central (interpretación editorial).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "temas_eticos",
+            "type": "string",
+            "separador": ";",
+            "enum_elementos": [
+              "privacidad",
+              "vigilancia",
+              "identidad-digital",
+              "ia-y-conciencia",
+              "castigo-y-justicia",
+              "adiccion",
+              "consentimiento",
+              "desinformacion",
+              "desigualdad",
+              "memoria",
+              "reputacion-y-redes-sociales",
+              "espectaculo-y-violencia",
+              "duelo-y-muerte",
+              "autonomia-y-control",
+              "guerra-y-deshumanizacion",
+              "relaciones-y-sexualidad",
+              "poder-corporativo"
+            ],
+            "description": "Temas de la lista controlada del README, separados por punto y coma en el CSV y como array en el JSON (interpretación editorial).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "url_analisis_nachomg",
+            "type": "string",
+            "format": "uri",
+            "description": "Análisis del episodio o de su temporada en nachomg.com, si existe."
+          },
+          {
+            "name": "url_fuente_creditos",
+            "type": "string",
+            "format": "uri",
+            "description": "Fuente principal de fechas y créditos.",
+            "constraints": {
+              "required": true
+            }
+          }
+        ],
+        "primaryKey": [
+          "id"
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "name": "black-mirror-json",
+      "path": "black-mirror.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "description": "Los mismos registros que el CSV, como lista de objetos JSON. Las columnas con 'separador' se publican como arrays y las vacías como null."
+    }
+  ]
+}

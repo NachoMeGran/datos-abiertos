@@ -1,0 +1,229 @@
+{
+  "profile": "data-package",
+  "name": "patrones-oscuros",
+  "title": "Taxonomía de patrones de diseño engañosos (EDPB, DSA y Directiva 2005/29/CE)",
+  "description": "Tipos de patrones de diseño engañosos descritos en las Directrices 03/2022 del EDPB (v2.0), el art. 25 y el considerando 67 del Reglamento de Servicios Digitales y el anexo I de la Directiva 2005/29/CE, con descripción, ejemplo genérico y alternativa ética.",
+  "version": "1.0.0",
+  "created": "2026-11-20T00:00:00Z",
+  "homepage": "https://github.com/NachoMeGran/datos-abiertos/tree/main/patrones-oscuros",
+  "keywords": [
+    "patrones oscuros",
+    "dark patterns",
+    "diseño engañoso",
+    "EDPB",
+    "DSA",
+    "RGPD",
+    "prácticas comerciales desleales",
+    "UX ética"
+  ],
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/",
+      "title": "Creative Commons Attribution 4.0"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "Nacho Menéndez Granda",
+      "path": "https://nachomg.com/nacho-menendez/",
+      "role": "author"
+    }
+  ],
+  "sources": [
+    {
+      "title": "EDPB, Guidelines 03/2022 on deceptive design patterns in social media platform interfaces, v2.0 (14-02-2023)",
+      "path": "https://www.edpb.europa.eu/system/files/documents/2023-02/edpb_03-2022_guidelines_on_deceptive_design_patterns_in_social_media_platform_interfaces_v2_en_0.pdf"
+    },
+    {
+      "title": "Reglamento (UE) 2022/2065 (Reglamento de Servicios Digitales), texto en el BOE (DOUE-L-2022-81573)",
+      "path": "https://www.boe.es/buscar/doc.php?id=DOUE-L-2022-81573"
+    },
+    {
+      "title": "Directiva 2005/29/CE, DO L 149 de 11-06-2005 (copia del BOE)",
+      "path": "https://www.boe.es/doue/2005/149/L00022-00039.pdf"
+    },
+    {
+      "title": "Directiva (UE) 2019/2161, DO L 328 de 18-12-2019 (copia del BOE)",
+      "path": "https://www.boe.es/doue/2019/328/L00007-00028.pdf"
+    }
+  ],
+  "resources": [
+    {
+      "profile": "tabular-data-resource",
+      "name": "patrones-oscuros",
+      "path": "patrones-oscuros.csv",
+      "format": "csv",
+      "mediatype": "text/csv",
+      "encoding": "utf-8",
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "header": true
+      },
+      "schema": {
+        "fields": [
+          {
+            "name": "id",
+            "type": "string",
+            "description": "Identificador estable: fuente y apartado (EDPB-4.1.1, DSA-25.3.a, UCPD-AI-7...).",
+            "constraints": {
+              "required": true,
+              "unique": true
+            }
+          },
+          {
+            "name": "fuente",
+            "type": "string",
+            "description": "Norma o documento de origen.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "EDPB",
+                "DSA",
+                "Directiva 2005/29/CE"
+              ]
+            }
+          },
+          {
+            "name": "nombre_es",
+            "type": "string",
+            "description": "Nombre breve en español. Para los tipos del EDPB es traducción propia (no hay versión oficial en español).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "nombre_original",
+            "type": "string",
+            "description": "Nombre en el texto oficial: inglés para el EDPB; cita literal (a veces abreviada con [...]) de la versión española oficial para el DSA y la Directiva.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "idioma_nombre_original",
+            "type": "string",
+            "description": "Idioma de nombre_original (ISO 639-1).",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "en",
+                "es"
+              ]
+            }
+          },
+          {
+            "name": "categoria_edpb",
+            "type": "string",
+            "description": "Categoría oficial del EDPB. Solo en las filas del EDPB.",
+            "constraints": {
+              "enum": [
+                "",
+                "Overloading",
+                "Skipping",
+                "Stirring",
+                "Obstructing",
+                "Fickle",
+                "Left in the dark"
+              ]
+            }
+          },
+          {
+            "name": "categoria_edpb_es",
+            "type": "string",
+            "description": "Traducción propia de la categoría del EDPB. Solo en las filas del EDPB."
+          },
+          {
+            "name": "categoria_edpb_afin",
+            "type": "string",
+            "description": "Categoría del EDPB más próxima. En las filas del DSA y de la Directiva es una correspondencia editorial, no oficial.",
+            "constraints": {
+              "required": true,
+              "enum": [
+                "Overloading",
+                "Skipping",
+                "Stirring",
+                "Obstructing",
+                "Fickle",
+                "Left in the dark"
+              ]
+            }
+          },
+          {
+            "name": "descripcion",
+            "type": "string",
+            "description": "Descripción en español parafraseada de la fuente.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "ejemplo_generico",
+            "type": "string",
+            "description": "Ejemplo genérico redactado para este conjunto. No describe ningún caso real ni empresa concreta.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "norma_relacionada",
+            "type": "string",
+            "description": "Disposiciones citadas por la fuente (en el EDPB, los artículos del RGPD de su anexo I).",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "referencia_fuente",
+            "type": "string",
+            "description": "Documento y apartado exactos.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "url_fuente",
+            "type": "string",
+            "format": "uri",
+            "description": "Enlace al texto oficial consultado.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "alternativa_etica",
+            "type": "string",
+            "description": "Alternativa de diseño respetuosa.",
+            "constraints": {
+              "required": true
+            }
+          },
+          {
+            "name": "alternativa_fuente",
+            "type": "string",
+            "description": "Origen de la alternativa: buena práctica del anexo II del EDPB (con su nombre original) o redacción editorial.",
+            "constraints": {
+              "required": true
+            }
+          }
+        ],
+        "primaryKey": [
+          "id"
+        ],
+        "missingValues": [
+          ""
+        ]
+      }
+    },
+    {
+      "profile": "data-resource",
+      "name": "patrones-oscuros-json",
+      "path": "patrones-oscuros.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "encoding": "utf-8",
+      "description": "Los mismos registros que el CSV, como lista de objetos JSON. Las columnas con 'separador' se publican como arrays y las vacías como null."
+    }
+  ]
+}
