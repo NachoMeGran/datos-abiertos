@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Si usas estos datos, cítalos así."
+message: "Si usas estos datos, cítalos así. Versión 0.9.0: borrador previo a la reescritura manual del autor."
 type: dataset
 title: "Datos abiertos de Nacho MG"
 abstract: "Conjuntos de datos abiertos y verificados sobre ética digital, cultura pop y diseño: taxonomía de patrones de diseño engañosos (EDPB, DSA y Directiva 2005/29/CE), Black Mirror episodio a episodio y objetos icónicos del diseño industrial español."
@@ -7,7 +7,7 @@ authors:
   - family-names: "Menéndez Granda"
     given-names: "Nacho"
     website: "https://nachomg.com"
-version: "1.0.0"
+version: "0.9.0"
 date-released: "2026-11-20"
 license: "CC-BY-4.0"
 repository-code: "https://github.com/NachoMeGran/datos-abiertos"

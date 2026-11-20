@@ -84,6 +84,6 @@ Sirve para clases de ética tecnológica, talleres sobre IA y privacidad o para 
 
 ## Cómo citar
 
-> Menéndez Granda, N. (2026). *Black Mirror: tecnología y ética episodio a episodio* (versión 1.0.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/black-mirror-tecnologia-y-etica. Licencia CC BY 4.0.
+> Menéndez Granda, N. (2026). *Black Mirror: tecnología y ética episodio a episodio* (versión 0.9.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/black-mirror-tecnologia-y-etica. Licencia CC BY 4.0.
 
 Más análisis de series y cine en la guía de [cultura pop](https://nachomg.com/cultura-pop/).

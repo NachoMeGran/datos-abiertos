@@ -66,7 +66,7 @@ Puedes copiar, adaptar y usar los datos con cualquier fin, también comercial, s
 
 ## Cómo citar
 
-> Menéndez Granda, N. (2026). *Datos abiertos de Nacho MG* (versión 1.0.0) [Conjunto de datos]. https://github.com/NachoMeGran/datos-abiertos. Licencia CC BY 4.0.
+> Menéndez Granda, N. (2026). *Datos abiertos de Nacho MG* (versión 0.9.0) [Conjunto de datos]. https://github.com/NachoMeGran/datos-abiertos. Licencia CC BY 4.0.
 
 Cada carpeta indica además cómo citar ese conjunto concreto. GitHub muestra la cita en formato APA y BibTeX a partir de [`CITATION.cff`](CITATION.cff).
 
@@ -77,3 +77,5 @@ Si encuentras un error, abre una incidencia con el conjunto, el `id` del registr
 ## Autoría
 
 Nacho Menéndez Granda, consultor de marketing digital en Barcelona. Escribo sobre marketing ético, uso responsable de la IA y cultura pop en [nachomg.com](https://nachomg.com/) y envío cada dos semanas la newsletter [Life on marketing](https://nachomg.com/life-on-marketing/). Más sobre mí en [nachomg.com/nacho-menendez/](https://nachomg.com/nacho-menendez/).
+
+**Estado: borrador en revisión.** La recopilación y verificación de fuentes, la estructura y las tareas mecánicas (formato, validación de datos, pruebas) se hicieron con apoyo de herramientas de IA, el uso que defiendo para esta tecnología. Cada dato se ha contrastado con la fuente enlazada. El texto definitivo de la documentación lo estoy reescribiendo a mano; hasta entonces, trata este material como un documento de trabajo.

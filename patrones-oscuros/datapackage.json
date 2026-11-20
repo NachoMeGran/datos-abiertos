@@ -3,7 +3,7 @@
   "name": "patrones-oscuros",
   "title": "Taxonomía de patrones de diseño engañosos (EDPB, DSA y Directiva 2005/29/CE)",
   "description": "Tipos de patrones de diseño engañosos descritos en las Directrices 03/2022 del EDPB (v2.0), el art. 25 y el considerando 67 del Reglamento de Servicios Digitales y el anexo I de la Directiva 2005/29/CE, con descripción, ejemplo genérico y alternativa ética.",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "created": "2026-11-20T00:00:00Z",
   "homepage": "https://github.com/NachoMeGran/datos-abiertos/tree/main/patrones-oscuros",
   "keywords": [

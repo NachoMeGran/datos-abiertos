@@ -70,6 +70,6 @@ Traducción de las categorías del EDPB que uso: *Overloading* = sobrecarga; *Sk
 
 ## Cómo citar
 
-> Menéndez Granda, N. (2026). *Patrones de diseño engañosos: taxonomía en español* (versión 1.0.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/patrones-oscuros. Licencia CC BY 4.0.
+> Menéndez Granda, N. (2026). *Patrones de diseño engañosos: taxonomía en español* (versión 0.9.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/patrones-oscuros. Licencia CC BY 4.0.
 
 Más contexto sobre marketing y diseño responsables en [nachomg.com/branding-y-marketing/](https://nachomg.com/branding-y-marketing/).

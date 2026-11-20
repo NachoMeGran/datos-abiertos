@@ -84,6 +84,6 @@ Los textos del catálogo del Museu del Disseny se publican con licencia CC BY-NC
 
 ## Cómo citar
 
-> Menéndez Granda, N. (2026). *Iconos del diseño industrial español del siglo XX* (versión 1.0.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/iconos-diseno-industrial-espanol. Licencia CC BY 4.0.
+> Menéndez Granda, N. (2026). *Iconos del diseño industrial español del siglo XX* (versión 0.9.0) [Conjunto de datos]. Datos abiertos de Nacho MG. https://github.com/NachoMeGran/datos-abiertos/tree/main/iconos-diseno-industrial-espanol. Licencia CC BY 4.0.
 
 Más sobre objetos y diseño en la guía de [diseño de producto](https://nachomg.com/diseno-de-producto/).
